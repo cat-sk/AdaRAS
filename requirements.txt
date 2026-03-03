@@ -1,0 +1,8 @@
+torch==2.7.1
+transformers==4.57.1
+transformer-lens==2.16.1
+vllm==0.10.1.1
+math_verify
+joblib
+tqdm
+scikit-learn

@@ -1,0 +1,27 @@
+experiment_name: "AIME_sample"
+model_name: "Qwen/Qwen3-1.7B" 
+project: "AIME" 
+
+data_path: "data/AIME/AIME_results_Qwen3-32B_filtered.jsonl"
+sample_path: "data/sample.jsonl"
+
+device: "cuda"
+type: "math" 
+
+generation_params:
+  max_new_tokens: 32768
+  do_sample: false
+  
+intervention:
+  enabled: false
+  use_dynamic_classifier: false
+
+  classifier:
+    dataset: "AIME"
+    n_features: 8192
+  
+  pattern_path: "RCNs_Identification/analysis_results/AIME_Qwen3-1.7B_refine_steering/top_200_neurons_by_rel_abs_diff.csv"
+  num_neurons_to_intervene: 50
+  
+  method: "steering_add" 
+  strength: 0.3

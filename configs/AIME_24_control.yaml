@@ -1,0 +1,17 @@
+experiment_name: "AIME_24_control"
+model_name: "Qwen/Qwen3-1.7B" 
+project: "AIME" 
+
+data_path: "data/AIME/AIME_results_Qwen3-32B_filtered.jsonl"
+sample_path: "data/AIME/AIME_test_24.jsonl" 
+
+device: "cuda"
+type: "math" 
+
+generation_params:
+  max_new_tokens: 32768
+  do_sample: false
+  
+intervention:
+  enabled: false
+  use_dynamic_classifier: false 
